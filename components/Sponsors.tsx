@@ -37,11 +37,11 @@ const Sponsors = () => {
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl mt-5 font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400 bg-clip-text text-transparent">
-            Our Sponsors
+            Our Past Sponsors
           </h2>
           <p className="mt-4 text-gray-400 max-w-3xl mx-auto">
             We proudly acknowledge the organizations that support innovation,
-            technology, and creativity at PRASTUTI’26.
+            technology, and creativity at PRASTUTI
           </p>
         </div>
 
