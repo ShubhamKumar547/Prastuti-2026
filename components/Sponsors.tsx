@@ -24,9 +24,9 @@ const sponsors = [
   { name: "IEEE Student Branch IIT(BHU)", logo: "/sponsors/ieee.png" },
   { name: "TimeOut Café", logo: "/sponsors/timeoutcafe.png" },
   { name: "eLearnMarkets", logo: "/sponsors/elearnmarkets.png" },
-  { name: "GeeksforGeeks", logo: "/sponsors/gfg.png" },
   { name: "Stark Bistro", logo: "/sponsors/starkbistro.png" },
   { name: "FestPav", logo: "/sponsors/festpav.png" },
+  { name: "GeeksforGeeks", logo: "/sponsors/gfg.png" },
 ];
 
 const Sponsors = () => {
@@ -45,7 +45,7 @@ const Sponsors = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 cursor-pointer sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
           {sponsors.map((sponsor, index) => (
             <div
               key={index}
