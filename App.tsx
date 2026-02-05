@@ -1,16 +1,21 @@
-import React, { useState, createContext, useContext} from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { Events } from './components/Events';
-import { Schedule } from './components/Schedule';
-import { OverallTeam } from './components/OverallTeam';
-import { Footer } from './components/Footer';
-import { Login } from './components/Auth';
-import { Registration } from './components/Registration';
+import React, { useState, createContext, useContext } from "react";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { Navbar } from "./components/Navbar";
+import { Hero } from "./components/Hero";
+import { Events } from "./components/Events";
+import { Schedule } from "./components/Schedule";
+import { OverallTeam } from "./components/OverallTeam";
+import { Footer } from "./components/Footer";
+import { Login } from "./components/Auth";
+import { Registration } from "./components/Registration";
 import { Analytics } from "@vercel/analytics/react";
-import { About} from './components/About';
-
+import Sponsors from "./components/Sponsors";
+import { About } from './components/About';
 interface User {
   name: string;
   email: string;
@@ -28,11 +33,10 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
 };
-
 
 const App: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -55,17 +59,18 @@ const App: React.FC = () => {
               <Route path="/" element={<Hero />} />
               <Route path="/events" element={<Events />} />
               <Route path="/schedule" element={<Schedule />} />
-              <Route path="/team" element={<OverallTeam/>} />
+              <Route path="/team" element={<OverallTeam />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Registration />} />
               <Route path="/about" element={<About />} />
-            </Routes>
-          </main>
+              <Route path="/sponsors" element={<Sponsors />} />
+            </Routes >
+          </main >
           <Footer />
-          <Analytics/>
-        </div>
-      </Router>
-    </AuthContext.Provider>
+          <Analytics />
+        </div >
+      </Router >
+    </AuthContext.Provider >
   );
 };
 
